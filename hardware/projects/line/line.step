@@ -1,7 +1,11 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('KiCad electronic assembly'),'2;1');
+<<<<<<< HEAD
+FILE_NAME('line.step','2026-10-11T14:34:52',('Pcbnew'),('Kicad'),
+=======
 FILE_NAME('line.step','2026-10-11T14:34:50',('Pcbnew'),('Kicad'),
+>>>>>>> main
   'Open CASCADE STEP processor 7.8','KiCad to STEP converter','Unknown'
   );
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
