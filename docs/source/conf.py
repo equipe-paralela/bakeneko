@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Dolphin Project'
-copyright = '2026, Guilherme Nunes Trofino'
+project = 'Bakeneko'
+copyright = '2026, Equipe Paralela'
 author = 'Guilherme Nunes Trofino'
-release = 'v1.4.0'
+release = 'v1.8.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
