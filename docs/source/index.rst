@@ -1,7 +1,7 @@
 Bakeneko
 ========
 
-Bakeneko (`ばけ猫 <https://en.wikipedia.org/wiki/Bakeneko>`_) means supernatural cat and it is our open source 3kg sumo robot.
+Bakeneko (`ばけ猫 <https://en.wikipedia.org/wiki/Bakeneko>`_) means supernatural cat and it is an open source 3kg sumo robot.
 
 .. toctree::
    :maxdepth: 2
