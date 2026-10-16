@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# Contributing to Dolphin
+# Contributing
 
 First off, thanks for taking the time to contribute!
 
@@ -25,11 +25,11 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 > If you want to ask a question, we assume that you have read the [README](./README.md).
 
-Before you ask a question, it is best to search for existing [Issues](https://github.com/tr0fin0/dolphin/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
+Before you ask a question, it is best to search for existing [Issues](https://github.com/equipe-paralela/bakeneko/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
 
 If you then still feel the need to ask a question and need clarification, we recommend the following:
 
-- Open an [Issue](https://github.com/tr0fin0/dolphin/issues/new).
+- Open an [Issue](https://github.com/equipe-paralela/bakeneko/issues/new).
 - Provide as much context as you can about what you're running into.
 
 We will then take care of the issue as soon as possible.
@@ -48,7 +48,7 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 
 - Make sure that you are using the latest version.
 - Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions.
-- To see if other users have experienced, and potentially already solved, the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/tr0fin0/dolphin/issues?q=label%3Abug).
+- To see if other users have experienced, and potentially already solved, the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/equipe-paralela/bakeneko/issues?q=label%3Abug).
 - Also make sure to search the internet to see if users outside of the project have discussed the issue.
 - Collect information about the bug:
   - Stack Trace
@@ -62,7 +62,7 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project:
 
-- Open an [Issue](https://github.com/tr0fin0/dolphin/issues/new) using the adequate template.
+- Open an [Issue](https://github.com/equipe-paralela/bakeneko/issues/new) using the adequate template.
 - Explain the behavior you would expect and the actual behavior.
 - Provide the information you collected in the previous section.
 - Please describe the *reproduction steps* that someone else can follow to recreate the issue on their own.
@@ -76,12 +76,12 @@ This section guides you through submitting an enhancement suggestion for LaTeX C
 
 - Ensure that you are using the latest version.
 - Read the [README](./README.md) carefully and find out if the functionality is already covered.
-- Search for existing [Issues](https://github.com/tr0fin0/dolphin/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
+- Search for existing [Issues](https://github.com/equipe-paralela/bakeneko/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 
 <!-- omit in toc -->
 #### How Do I Submit a Good Enhancement Suggestion?
 
-Enhancement suggestions are tracked as [GitHub issues](https://github.com/tr0fin0/dolphin/issues).
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/equipe-paralela/bakeneko/issues).
 
 - Use a **clear and descriptive title** for the issue to identify the suggestion.
 - Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
