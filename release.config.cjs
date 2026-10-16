@@ -92,47 +92,47 @@ module.exports = {
       {
         assets: [
           {
-            path: "hardware/projects/encoder/encoder.zip",
+            path: "sumo-hardware/kicad/projects/encoder/encoder.zip",
             name: "encoder-GER-${nextRelease.gitTag}.zip",
             label: "Encoder Gerber Files"
           },
           {
-            path: "hardware/projects/encoder/encoder.step",
+            path: "sumo-hardware/kicad/projects/encoder/encoder.step",
             name: "encoder-PCB-${nextRelease.gitTag}.step",
             label: "Encoder PCB STEP"
           },
           {
-            path: "hardware/projects/encoder/encoder.pdf",
+            path: "sumo-hardware/kicad/projects/encoder/encoder.pdf",
             name: "encoder-SCH-${nextRelease.gitTag}.pdf",
             label: "Encoder Schematic PDF"
           },
           {
-            path: "hardware/projects/line/line.zip",
+            path: "sumo-hardware/kicad/projects/line/line.zip",
             name: "line-GER-${nextRelease.gitTag}.zip",
             label: "Line Sensor Gerber Files"
           },
           {
-            path: "hardware/projects/line/line.step",
+            path: "sumo-hardware/kicad/projects/line/line.step",
             name: "line-PCB-${nextRelease.gitTag}.step",
             label: "Line Sensor PCB STEP"
           },
           {
-            path: "hardware/projects/line/line.pdf",
+            path: "sumo-hardware/kicad/projects/line/line.pdf",
             name: "line-SCH-${nextRelease.gitTag}.pdf",
             label: "Line Sensor Schematic PDF"
           },
           {
-            path: "hardware/projects/mainboard/mainboard.zip",
+            path: "sumo-hardware/kicad/projects/mainboard/mainboard.zip",
             name: "mainboard-GER-${nextRelease.gitTag}.zip",
             label: "Mainboard Gerber Files"
           },
           {
-            path: "hardware/projects/mainboard/mainboard.step",
+            path: "sumo-hardware/kicad/projects/mainboard/mainboard.step",
             name: "mainboard-PCB-${nextRelease.gitTag}.step",
             label: "Mainboard PCB STEP"
           },
           {
-            path: "hardware/projects/mainboard/mainboard.pdf",
+            path: "sumo-hardware/kicad/projects/mainboard/mainboard.pdf",
             name: "mainboard-SCH-${nextRelease.gitTag}.pdf",
             label: "Mainboard Schematic PDF"
           }

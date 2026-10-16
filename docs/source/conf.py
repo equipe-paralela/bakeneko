@@ -18,6 +18,7 @@ extensions = [
     'breathe',
     'exhale',
     'sphinx.ext.duration',
+    "sphinx.ext.intersphinx",
     'sphinx_design',
     'sphinx_simplepdf',
     'sphinxcontrib.mermaid',
@@ -40,6 +41,10 @@ primary_domain = 'c'
 
 templates_path = ['_templates']
 exclude_patterns = []
+
+intersphinx_mapping = {
+    "sumo-hardware": ("https://sumo-hardware.readthedocs.io/en/latest/", None),
+}
 
 
 

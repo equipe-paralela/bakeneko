@@ -17,5 +17,4 @@ When running for the first time, it should pull an ubuntu image which could take
    :caption: Table of Contents
 
    cicd/index
-   kicad/index
    release/index

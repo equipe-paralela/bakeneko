@@ -9,6 +9,7 @@ Bakeneko (`ばけ猫 <https://en.wikipedia.org/wiki/Bakeneko>`_) means supernatu
 
    contribute/index
    electronic/index
+   Hardware <https://sumo-hardware.readthedocs.io/en/latest/index.html>
    firmware/index
    mechanic/index
 
