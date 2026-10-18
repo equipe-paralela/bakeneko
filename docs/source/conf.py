@@ -15,8 +15,6 @@ release = 'v1.8.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'breathe',
-    'exhale',
     'sphinx.ext.duration',
     "sphinx.ext.intersphinx",
     'sphinx_design',
@@ -24,25 +22,11 @@ extensions = [
     'sphinxcontrib.mermaid',
 ]
 
-breathe_projects = {
-    "firmware": "./firmware/api/xml"
-}
-breathe_default_project = "firmware"
-
-exhale_args = {
-    "createTreeView":       True,
-    "containmentFolder":    "./firmware/api/rst",
-    "doxygenStripFromPath": "./firmware/api/xml",
-    "rootFileName":         "index.rst",
-    "rootFileTitle":        "API",
-}
-
-primary_domain = 'c'
-
 templates_path = ['_templates']
 exclude_patterns = []
 
 intersphinx_mapping = {
+    "sumo-firmware": ("https://sumo-firmware.readthedocs.io/en/latest/", None),
     "sumo-hardware": ("https://sumo-hardware.readthedocs.io/en/latest/", None),
 }
 

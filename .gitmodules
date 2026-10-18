@@ -2,3 +2,7 @@
 	path = sumo-hardware
 	url = https://github.com/equipe-paralela/sumo-hardware
 	branch = main
+[submodule "sumo-firmware"]
+	path = sumo-firmware
+	url = https://github.com/equipe-paralela/sumo-firmware
+	branch = main
