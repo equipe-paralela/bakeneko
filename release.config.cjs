@@ -91,51 +91,7 @@ module.exports = {
       '@semantic-release/github',
       {
         assets: [
-          {
-            path: "sumo-hardware/kicad/projects/encoder/encoder.zip",
-            name: "encoder-GER-${nextRelease.gitTag}.zip",
-            label: "Encoder Gerber Files"
-          },
-          {
-            path: "sumo-hardware/kicad/projects/encoder/encoder.step",
-            name: "encoder-PCB-${nextRelease.gitTag}.step",
-            label: "Encoder PCB STEP"
-          },
-          {
-            path: "sumo-hardware/kicad/projects/encoder/encoder.pdf",
-            name: "encoder-SCH-${nextRelease.gitTag}.pdf",
-            label: "Encoder Schematic PDF"
-          },
-          {
-            path: "sumo-hardware/kicad/projects/line/line.zip",
-            name: "line-GER-${nextRelease.gitTag}.zip",
-            label: "Line Sensor Gerber Files"
-          },
-          {
-            path: "sumo-hardware/kicad/projects/line/line.step",
-            name: "line-PCB-${nextRelease.gitTag}.step",
-            label: "Line Sensor PCB STEP"
-          },
-          {
-            path: "sumo-hardware/kicad/projects/line/line.pdf",
-            name: "line-SCH-${nextRelease.gitTag}.pdf",
-            label: "Line Sensor Schematic PDF"
-          },
-          {
-            path: "sumo-hardware/kicad/projects/mainboard/mainboard.zip",
-            name: "mainboard-GER-${nextRelease.gitTag}.zip",
-            label: "Mainboard Gerber Files"
-          },
-          {
-            path: "sumo-hardware/kicad/projects/mainboard/mainboard.step",
-            name: "mainboard-PCB-${nextRelease.gitTag}.step",
-            label: "Mainboard PCB STEP"
-          },
-          {
-            path: "sumo-hardware/kicad/projects/mainboard/mainboard.pdf",
-            name: "mainboard-SCH-${nextRelease.gitTag}.pdf",
-            label: "Mainboard Schematic PDF"
-          }
+          {}
         ],
         failComment: false,
         labels: ['bug', 'maintenance'],

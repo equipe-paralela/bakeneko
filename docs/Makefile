@@ -16,12 +16,9 @@ help:
 
 clean:
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-	@echo "Removing Doxygen API Files" && rm -rf $(SOURCEDIR)/firmware/api/xml
-	@echo "Removing Exhale  API Files" && rm -rf $(SOURCEDIR)/firmware/api/rst
 
 docs:
 	make clean
-	doxygen Doxyfile
 	make html
 
 # Catch-all target: route all unknown targets to Sphinx using the new
