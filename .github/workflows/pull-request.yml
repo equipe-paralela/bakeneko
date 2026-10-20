@@ -1,0 +1,106 @@
+name: Pull Request
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    types:
+      - edited
+      - opened
+      - synchronize
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event.action }}
+  cancel-in-progress: true
+
+jobs:
+  add-labels:
+    name: Add Labels
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+
+      - name: Based on modified files
+        uses: actions/labeler@bf12e9b00b37c5c0ca2b87b79b2daf7891dbda13 #v7.0.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Based on branch name for bugs
+        uses: actions-ecosystem/action-add-labels@18f1af5e3544586314bbe15c0273249c770b2daf #v1
+        if: startsWith(github.event.pull_request.head.ref, 'fix')
+        with:
+          labels: bug
+
+      - name: Based on branch name for documentation
+        uses: actions-ecosystem/action-add-labels@18f1af5e3544586314bbe15c0273249c770b2daf #v1
+        if: startsWith(github.event.pull_request.head.ref, 'doc')
+        with:
+          labels: documentation
+
+      - name: Based on branch name for enhancement
+        uses: actions-ecosystem/action-add-labels@18f1af5e3544586314bbe15c0273249c770b2daf #v1
+        if: startsWith(github.event.pull_request.head.ref, 'feat')
+        with:
+          labels: enhancement
+
+      - name: Based on branch name with maintenance
+        uses: actions-ecosystem/action-add-labels@18f1af5e3544586314bbe15c0273249c770b2daf #v1
+        if: |
+          startsWith(github.event.pull_request.head.ref, 'ci') ||
+          startsWith(github.event.pull_request.head.ref, 'maint')
+        with:
+          labels: maintenance
+
+  assert-name:
+    name: Assert Name
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50  #v6.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  suggestions:
+    name: Labels Suggestions
+    needs:
+      - add-labels
+      - assert-name
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Display Labels
+      id: labels
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+      run: |
+        labels=$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json labels --jq '[.labels[].name] | join(",")')
+        echo "Labels: '$labels'"
+        echo "labels=$labels" >> "$GITHUB_OUTPUT"
+
+    - name: Possible Labels
+      uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 #v5.0.0
+
+      # Execute only when no labels have been applied to the pull request
+      if: steps.labels.outputs.labels == ''
+      with:
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          Please add at least one of the following labels:
+          - [bug](https://github.com/${{ github.repository }}/pulls?q=label%3Abug+)
+          - [dependencies](https://github.com/${{ github.repository }}/pulls?q=label%3Adependencies+)
+          - [documentation](https://github.com/${{ github.repository }}/pulls?q=label%3Adocumentation+)
+          - [enhancement](https://github.com/${{ github.repository }}/pulls?q=label%3Aenhancement+)
+          - [good first issue](https://github.com/${{ github.repository }}/pulls?q=label%3Agood+first+issue+)
+          - [maintenance](https://github.com/${{ github.repository }}/pulls?q=label%3Amaintenance+)
+          - [security](https://github.com/${{ github.repository }}/pulls?q=label%3Asecurity+)
+          - [testing](https://github.com/${{ github.repository }}/pulls?q=label%3Atesting+)

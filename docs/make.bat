@@ -30,7 +30,6 @@ goto end
 
 :clean
 %SPHINXBUILD% -M clean %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
-echo Cleaning Doxygen and Exhale API generated files...
 goto end
 
 :docs
