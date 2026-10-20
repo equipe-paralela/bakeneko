@@ -24,8 +24,12 @@ repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v6.0.0
   hooks:
+  - id: check-added-large-files
+  - id: check-illegal-windows-names
   - id: check-merge-conflict
   - id: check-yaml
+  - id: detect-private-key
+  - id: end-of-file-fixer
   - id: trailing-whitespace
 
 - repo: https://github.com/python-jsonschema/check-jsonschema

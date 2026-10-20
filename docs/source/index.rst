@@ -7,7 +7,7 @@ Bakeneko (`ばけ猫 <https://en.wikipedia.org/wiki/Bakeneko>`_) means supernatu
    :maxdepth: 2
    :caption: Table of Contents
 
-   contribute/index
+   Contribute <https://paralela-template.readthedocs.io/en/latest/>
    electronic/index
    Firmware <https://sumo-firmware.readthedocs.io/en/latest/index.html>
    Hardware <https://sumo-hardware.readthedocs.io/en/latest/index.html>

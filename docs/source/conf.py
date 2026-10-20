@@ -7,25 +7,24 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Bakeneko'
-copyright = '2026, Equipe Paralela'
+copyright = '2026-%Y, Equipe Paralela'
 author = 'Guilherme Nunes Trofino'
-release = 'v1.8.0'
+release = 'v1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    'sphinx_design',
     'sphinx.ext.duration',
     "sphinx.ext.intersphinx",
-    'sphinx_design',
-    'sphinx_simplepdf',
-    'sphinxcontrib.mermaid',
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
 
 intersphinx_mapping = {
+    "paralela-template": ("https://paralela-template.readthedocs.io/en/latest/", None),
     "sumo-firmware": ("https://sumo-firmware.readthedocs.io/en/latest/", None),
     "sumo-hardware": ("https://sumo-hardware.readthedocs.io/en/latest/", None),
 }

@@ -4,7 +4,7 @@
 
 - name: dependencies
   description: Related with project dependencies
-  color: ffc0cb
+  color: FFC0CB
 
 - name: documentation
   description: Improvements or additions to documentation

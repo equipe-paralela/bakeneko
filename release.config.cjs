@@ -90,9 +90,7 @@ module.exports = {
     [
       '@semantic-release/github',
       {
-        assets: [
-          {}
-        ],
+        assets: [],
         failComment: false,
         labels: ['bug', 'maintenance'],
         releasedLabels: false,
